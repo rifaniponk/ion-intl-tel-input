@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
+import { PhoneNumberFormat, PhoneNumberUtil, PhoneNumberType } from 'google-libphonenumber';
 import { CountryI } from './../models/country.model';
 
 @Pipe({name: 'countryPlaceholder'})
@@ -11,7 +11,7 @@ export class CountryPlaceholder implements PipeTransform {
 
     const phoneUtil = PhoneNumberUtil.getInstance();
     try {
-      const placeholder = phoneUtil.format(phoneUtil.getExampleNumber(country.isoCode), PhoneNumberFormat.INTERNATIONAL);
+      const placeholder = phoneUtil.format(phoneUtil.getExampleNumberForType(country.isoCode, PhoneNumberType.MOBILE), PhoneNumberFormat.INTERNATIONAL);
       if (placeholder) {
         if (separateDialCode) {
           return placeholder.substr(placeholder.indexOf(' ') + 1);
