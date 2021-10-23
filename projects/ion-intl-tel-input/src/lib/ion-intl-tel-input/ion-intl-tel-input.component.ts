@@ -505,13 +505,9 @@ export class IonIntlTelInputComponent
       });
       this.codeChange.emit();
     }
-    setTimeout(() => {
-      this.numberInputEl.setFocus();
-    }, 400);
   }
 
   onCodeClose() {
-    this.onTouched();
     this.setIonicClasses(this.el);
     this.hasFocus = false;
     this.setItemClass(this.el, 'item-has-focus', false);

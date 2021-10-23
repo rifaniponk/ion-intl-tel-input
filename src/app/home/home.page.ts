@@ -48,7 +48,8 @@ export class HomePage implements OnInit {
   ngOnInit() {
     this.form = new FormGroup({
       phoneNumber: new FormControl({
-        value: /* null */this.formValue.phoneNumber,
+        value: null,
+        // value: /* null */this.formValue.phoneNumber,
         disabled: this.disableTest
       }, [
         Validators.required,
