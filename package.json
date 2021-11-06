@@ -1,5 +1,5 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.8",
   "name": "ion-intl-tel-input-991",
   "title": "Ion Intl Tel Input (forked version)",
   "description": "An Ionic component for International Phone Number Input, that allows all countries, validation with google phone lib, limited countries, preferred countries, virtual scrolling and much more.",
@@ -60,7 +60,7 @@
     "core-js": "^2.5.4",
     "flag-icon-css": "^3.4.5",
     "google-libphonenumber": "^3.2.6",
-    "ionic-selectable": "^4.6.0",
+    "ionic-selectable": "^4.8.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

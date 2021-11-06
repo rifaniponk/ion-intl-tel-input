@@ -278,6 +278,26 @@ export class IonIntlTelInputComponent
   separateDialCode = true;
 
   /**
+   * css class for ion-item (mobile number input wrapper)
+   * See more on.
+   *
+   * @default  null
+   * @memberof IonIntlTelInputComponent
+   */
+  @Input()
+  numberInputItemClass = null;
+
+  /**
+   * label for mobile input number
+   * See more on.
+   *
+   * @default null
+   * @memberof IonIntlTelInputComponent
+   */
+  @Input()
+  mobileNumberLabel = null;
+
+  /**
    * Fires when the Phone number Input is changed.
    * See more on.
    *

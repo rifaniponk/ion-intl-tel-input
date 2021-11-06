@@ -40,19 +40,22 @@
 </div>
 
 <div class="ion-intl-tel-input-number">
-  <ion-input
-    #numberInput
-    [(ngModel)]="phoneNumber"
-    autocomplete="off"
-    [disabled] = "disabled" 
-    [attr.maxLength]="maxLength"
-    type="tel"
-    (ionBlur)="onIonNumberBlur()"
-    (ionChange)="onIonNumberChange($event)"
-    (ionFocus)="onIonNumberFocus()"
-    (ionInput)="onIonNumberInput($event)"
-    (keydown)="onNumberKeyDown($event)"
-    (ngModelChange)="onNumberChange()"
-    placeholder="{{country | countryPlaceholder: inputPlaceholder:separateDialCode:fallbackPlaceholder}}" >
-  </ion-input>
+  <ion-item [class]="numberInputItemClass">
+    <ion-label position="floating" *ngIf="mobileNumberLabel">{{mobileNumberLabel}}</ion-label>
+    <ion-input
+      #numberInput
+      [(ngModel)]="phoneNumber"
+      autocomplete="off"
+      [disabled] = "disabled" 
+      [attr.maxLength]="maxLength"
+      type="tel"
+      (ionBlur)="onIonNumberBlur()"
+      (ionChange)="onIonNumberChange($event)"
+      (ionFocus)="onIonNumberFocus()"
+      (ionInput)="onIonNumberInput($event)"
+      (keydown)="onNumberKeyDown($event)"
+      (ngModelChange)="onNumberChange()"
+      placeholder="{{country | countryPlaceholder: inputPlaceholder:separateDialCode:fallbackPlaceholder}}" >
+    </ion-input>
+  </ion-item>
 </div>
