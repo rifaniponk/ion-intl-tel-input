@@ -298,6 +298,16 @@ export class IonIntlTelInputComponent
   mobileNumberLabel = null;
 
   /**
+   * label for mobile input number
+   * See more on.
+   *
+   * @default null
+   * @memberof IonIntlTelInputComponent
+   */
+  @Input()
+  mobileNumberLabelPosition: 'fixed' | 'floating' | 'stacked' | undefined = 'stacked';
+
+  /**
    * Fires when the Phone number Input is changed.
    * See more on.
    *

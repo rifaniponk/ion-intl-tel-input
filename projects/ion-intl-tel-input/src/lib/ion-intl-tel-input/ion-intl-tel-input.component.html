@@ -41,13 +41,14 @@
 
 <div class="ion-intl-tel-input-number">
   <ion-item [class]="numberInputItemClass">
-    <ion-label position="floating" *ngIf="mobileNumberLabel">{{mobileNumberLabel}}</ion-label>
+    <ion-label [position]="mobileNumberLabelPosition" *ngIf="mobileNumberLabel">{{mobileNumberLabel}}</ion-label>
     <ion-input
       #numberInput
       [(ngModel)]="phoneNumber"
       autocomplete="off"
       [disabled] = "disabled" 
       [attr.maxLength]="maxLength"
+      clear-input
       type="tel"
       (ionBlur)="onIonNumberBlur()"
       (ionChange)="onIonNumberChange($event)"
