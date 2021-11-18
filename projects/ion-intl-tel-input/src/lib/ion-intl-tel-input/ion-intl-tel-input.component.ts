@@ -301,11 +301,21 @@ export class IonIntlTelInputComponent
    * label for mobile input number
    * See more on.
    *
-   * @default null
+   * @default stacked
    * @memberof IonIntlTelInputComponent
    */
   @Input()
   mobileNumberLabelPosition: 'fixed' | 'floating' | 'stacked' | undefined = 'stacked';
+
+  /**
+   * set mobile number input error, when this true it will add 'input-invalid' class on the ion-input
+   * See more on.
+   *
+   * @default false
+   * @memberof IonIntlTelInputComponent
+   */
+  @Input()
+  mobileNumberHasError = false;
 
   /**
    * Fires when the Phone number Input is changed.
